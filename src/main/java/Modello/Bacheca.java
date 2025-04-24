@@ -1,4 +1,4 @@
-package model;
+package Modello;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -18,7 +18,7 @@ public class Bacheca {
 
 
     public void setTitolo(String titolo) {
-        TitoloBacheca titoloBacheca = TitoloBacheca.convertiDaString(titolo);
+        TitoloBacheca titoloBacheca = TitoloBacheca.convertiDaString(titolo);  //controlla che la stringa sia un titoloBacheca valido
         if (titoloBacheca == null) {
             System.out.println("Titolo non valido. Scegliere tra: Università / Lavoro / Tempo Libero");
         }
@@ -49,7 +49,7 @@ public class Bacheca {
     }
 
 
-    public void refreshPosizioni() { //sistema i valori delle posizioni dei todo nella bacheca
+    public void refreshPosizioni() { //sistema i valori delle posizioni dei todo nella bacheca: da usare quando si elimina o si sposta un todo dalla bacheca
         for (int i = 0; i < this.todos.size(); i++) {
             ToDo todo = todos.get(i);
             todo.setPosizione(i + 1);

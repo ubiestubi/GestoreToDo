@@ -1,4 +1,4 @@
-package model;
+package Modello;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -50,7 +50,7 @@ public class ToDo {
         this.utenti.add(bacheca.utente);
     }
 
-    // setter e getter per gli attributi tranne che per stato e bacheca
+    // lista di getter e setter per gli attributi 'facili'
     public void setTitolo(String titolo) {
         if (this.utenti.size() > 1) {
             System.out.println("Non si può cambiare titolo a ToDo condivisi");
@@ -108,9 +108,6 @@ public class ToDo {
         return utentiUsername;
     }
 
-    //
-
-
     public void completato() {
         this.stato = StatoToDo.COMPLETATO;
     }
@@ -118,6 +115,9 @@ public class ToDo {
     public void nonCompletato() {
         this.stato = StatoToDo.NON_COMPLETATO;
     }
+    // fine getter e setter
+
+
 
 
     public void elimina() {

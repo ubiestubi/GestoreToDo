@@ -1,4 +1,4 @@
-package model;
+package Modello;
 
 public enum StatoToDo {
     COMPLETATO,
