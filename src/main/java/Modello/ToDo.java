@@ -81,7 +81,22 @@ public class ToDo {
     public String getTitolo() {
         return titolo;
     }
+    public String getStato(){
+        String statotemp = "";
+        switch (this.stato){
+            case NON_COMPLETATO:
+                statotemp = "Non completato";
+                break;
+            case COMPLETATO:
+                statotemp = "Completato";
+                break;
+        }
+        return statotemp;
+    }
 
+    public String getBacheca(){
+        return this.bacheca.getTitolo();
+    }
     public LocalDate getScadenza() {
         return scadenza;
     }
