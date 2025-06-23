@@ -65,10 +65,6 @@ public class ToDo {
      * @param titolo il titolo
      */
     public void setTitolo(String titolo) {
-        if (this.utenti.size() > 1) {
-            System.out.println("Non si può cambiare titolo a ToDo condivisi");
-            return;
-        }
         this.titolo = titolo;
     }
 

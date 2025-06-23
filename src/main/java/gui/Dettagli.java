@@ -108,6 +108,10 @@ public class Dettagli {
         salvaEChiudiButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (!controller.utente.getUsername().equals(controller.todoSelezionato.getUtenteOriginale())){
+                    JOptionPane.showMessageDialog(principale,"Non puoi modificare un ToDo condiviso da un altro utente");
+                    return;
+                }
                 boolean flagRefresh = false;//se ho cambiato titolo o scadenza o bacheca, forzo il refresh di tutto l'oggetto home
                 Date dataSpinner = (Date) spinnerData.getValue(); //prendo l'object dello spinner e lo casto in Date, successivamente lo converto in LocalDate
                 if (!controller.todoSelezionato.getTitolo().equals(textTitolo.getText())
